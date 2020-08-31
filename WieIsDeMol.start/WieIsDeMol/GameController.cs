@@ -22,11 +22,11 @@ namespace WieIsDeMol
 
             this.questions = new string[7];
             this.questions[0] = "I know who did it, it was {name}! (repeatable)";
-            this.questions[1] = "Is your gender {Gender}? (Male, Female, Unknown)";
+            //this.questions[1] = "Is your gender {Gender}? (Male, Female, Unknown)";
             this.questions[2] = "Do you have glasses? (True or False)";
-            this.questions[3] = "Is your balance higher then {value}?";
-            this.questions[4] = "Is your haircollor {haircollor}?";
-            this.questions[5] = "Do you ilke to practice {hobby} in your free time?";
+            //this.questions[3] = "Is your balance higher then {value}?";
+            //this.questions[4] = "Is your haircollor {haircollor}?";
+            //this.questions[5] = "Do you ilke to practice {hobby} in your free time?";
             this.questions[6] = "Are you older then {age}?";
 
 
@@ -93,12 +93,9 @@ namespace WieIsDeMol
         {
             switch (questionIndex)
             {
+                //TODO: Add switch cases
                 case 0: return this.investigator.Accuse(param); break;
-                case 1: return this.investigator.FilterByGender(paramToEnum(param)); break;
                 case 2: return this.investigator.FilterByGlasses(); break;
-                case 3: return this.investigator.FilterByBalance(double.Parse(param));
-                case 4: return this.investigator.FilterByHairCollor(param);
-                case 5: return this.investigator.FilterByHobby(param);
                 case 6: return this.investigator.FilterByAge(int.Parse(param));
                 default: return null;
             }
@@ -119,14 +116,7 @@ namespace WieIsDeMol
         {
             Console.WriteLine("You are now on turn {0} and there are {1} suspects left: ", this.turnCounter, this.investigator.Suspects.Count);
 
-            //zelf een counter bij houden of toch maar de klassieke for loop?
-            int counter = 1;
-            this.investigator.Suspects.ForEach(s => {
-                Console.Write("=== Suspect Nr. {0}: ", counter);
-                Console.WriteLine(s.ToString());
-                counter++;
-            });
-            Console.WriteLine("====================================");
+            //TODO: Print all suspects like '=== Suspect Nr. 1: Mr Person
         }
 
         private Gender paramToEnum(string gender)
