@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
-using WieIsDeMol.domain;
+using WieIsDeMol.Domain;
 
 namespace WieIsDeMol
 {

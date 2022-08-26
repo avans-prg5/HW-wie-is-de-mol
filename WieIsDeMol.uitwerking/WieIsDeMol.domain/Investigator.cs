@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WieIsDeMol.domain
+namespace WieIsDeMol.Domain
 {
     public class Investigator
     {

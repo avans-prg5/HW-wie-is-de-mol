@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WieIsDeMol.domain
+namespace WieIsDeMol.Domain
 {
     public static class MyExtensions
     {
